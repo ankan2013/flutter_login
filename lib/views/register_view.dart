@@ -121,6 +121,10 @@ class _RegisterViewState extends State<RegisterView> {
                             if (_formKey.currentState!.validate()) {
                               _register();
                             }
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                              content: Text("Please check the email for verification"),
+                              backgroundColor: Colors.black,
+                            ));
                           },
                           color: Colors.black,
                           child: Text(
